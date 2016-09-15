@@ -8,7 +8,7 @@ Simpelt kald til en RESTful webservice inkl. håndtering af retursvar.
 
 # Preview
 
-http://i.imgur.com/1Y2nGTN.gifv
+http://www.i.imgur.com/1Y2nGTN.gifv
 
 # Download
 
