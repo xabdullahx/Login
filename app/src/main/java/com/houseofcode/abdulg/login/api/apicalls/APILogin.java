@@ -17,7 +17,7 @@ import okhttp3.RequestBody;
  */
 public class APILogin {
 
-    public void callLoginAPI(String username, String password, Callback callback){
+    public void callLoginAPI(String username, String password, Callback callback) {
         LoginRequest login = new LoginRequest();
         login.setEmail(username);
         login.setPassword(password);

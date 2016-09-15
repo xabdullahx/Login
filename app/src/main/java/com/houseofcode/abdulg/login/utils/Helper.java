@@ -10,7 +10,7 @@ import java.util.List;
  * Created by Abdullah on 15-09-2016.
  */
 public class Helper {
-    public static List<UserInfoDataObject> convertCurrentUserToDataObject(CurrentUser currentUser){
+    public static List<UserInfoDataObject> convertCurrentUserToDataObject(CurrentUser currentUser) {
         if (currentUser == null)
             return new ArrayList<>();
         if (currentUser.user == null)

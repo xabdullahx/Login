@@ -10,8 +10,8 @@ import java.util.List;
  * Created by Abdullah on 14-09-2016.
  */
 public class ToolBox {
-    public static String getStringNoNull(Object value){
-        if (value != null){
+    public static String getStringNoNull(Object value) {
+        if (value != null) {
             return value.toString();
         }
         return "";

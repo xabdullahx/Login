@@ -22,21 +22,21 @@ import java.util.List;
  * Created by Abdullah on 14-09-2016.
  */
 public class LoggedIn extends Activity {
-    CurrentUser currentUser;
-    RecyclerView recyclerView;
+    private CurrentUser currentUser;
+    private RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logged_in);
-        initGloabalVariables();
+        initMemberVariables();
         initRecyclerView();
     }
-    
-    private void initRecyclerView(){
+
+    private void initRecyclerView() {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-        
+
         int onedpi = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 1, getResources().getDisplayMetrics());
 
         List<UserInfoDataObject> userDatas = Helper.convertCurrentUserToDataObject(currentUser);
@@ -44,11 +44,11 @@ public class LoggedIn extends Activity {
         recyclerView.setAdapter(adapter);
     }
 
-    public void initGloabalVariables() {
+    private void initMemberVariables() {
         currentUser = getIntent().getExtras().getParcelable(Constants.LOGGEDIN_LOGINSCREEN_USER);
 
         TextView tv_UserLoggedIn = (TextView) findViewById(R.id.tv_userloggedin);
-        tv_UserLoggedIn.setText(getString(R.string.logged_in_as)+":\n"+currentUser.user.getName());
+        tv_UserLoggedIn.setText(getString(R.string.logged_in_as) + ":\n" + currentUser.user.getName());
 
         Button btn_logout = (Button) findViewById(R.id.btn_logout);
         btn_logout.setOnClickListener(new View.OnClickListener() {
@@ -58,10 +58,8 @@ public class LoggedIn extends Activity {
             }
         });
 
-        recyclerView = (RecyclerView)findViewById(R.id.rv);
+        recyclerView = (RecyclerView) findViewById(R.id.rv);
     }
-    
-
 
 
 }

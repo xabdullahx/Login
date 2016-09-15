@@ -28,17 +28,17 @@ import okhttp3.Callback;
 import okhttp3.Response;
 
 public class LoginScreen extends AppCompatActivity {
-    EditText et_Username, et_Password;
-    Button btn_Login;
-    Handler dialogHandler;
-    ProgressDialog progress;
-    Callback callback;
+    private EditText et_Username, et_Password;
+    private Button btn_Login;
+    private Handler dialogHandler;
+    private ProgressDialog progress;
+    private Callback callback;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_screen);
-        initGloabalVariables();
+        initMemberVariables();
     }
 
     private void showProgressDialog() {
@@ -72,8 +72,7 @@ public class LoginScreen extends AppCompatActivity {
         login.callLoginAPI(email, password, callback);
     }
 
-    private void initGloabalVariables() {
-
+    private void initMemberVariables() {
         et_Username = (EditText) findViewById(R.id.et_username);
 
         et_Password = (EditText) findViewById(R.id.et_password);

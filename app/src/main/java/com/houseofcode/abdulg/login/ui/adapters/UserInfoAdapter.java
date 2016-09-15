@@ -39,15 +39,15 @@ public class UserInfoAdapter extends RecyclerView.Adapter<UserInfoViewHolder> {
         holder.getCardView().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (onedpi <= 0){
+                if (onedpi <= 0) {
                     //Hvis vi ikke har fat i den rigtige dpi, så lad vær med at gøre noget ved klik.
                     return;
                 }
                 int currentHeight = holder.getCardView().getLayoutParams().height;
                 int wrap_content = LinearLayout.LayoutParams.WRAP_CONTENT;
-                int original_height = onedpi*100;
+                int original_height = onedpi * 100;
                 ViewGroup.LayoutParams layoutParams = holder.getCardView().getLayoutParams();
-                boolean doesTextFit = holder.getText().getPaint().measureText(holder.getText().getText().toString()) < ((holder.getCardView().getWidth() - (onedpi*24)) * 2);
+                boolean doesTextFit = holder.getText().getPaint().measureText(holder.getText().getText().toString()) < ((holder.getCardView().getWidth() - (onedpi * 24)) * 2);
                 if (!doesTextFit) {
                     if (currentHeight != wrap_content) {
                         layoutParams.height = wrap_content;

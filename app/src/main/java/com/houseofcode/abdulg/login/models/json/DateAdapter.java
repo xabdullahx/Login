@@ -12,20 +12,20 @@ import java.util.Date;
  */
 public class DateAdapter {
     @FromJson
-    Date fromJson(String date){
+    Date fromJson(String date) {
         //2016-03-02T14:33:07.000+01:00
-        try{
+        try {
             String string = date;
             DateFormat format = new SimpleDateFormat("yyy-MM-dd'T'HH:mm:ss.SSSZ");
             return format.parse(string);
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
     }
 
     @ToJson
-    String toJson(Date date){
+    String toJson(Date date) {
         return "";
     }
 
