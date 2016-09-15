@@ -12,4 +12,4 @@ http://i.imgur.com/1Y2nGTN.gifv
 
 # Download
 
-..Coming soon..
+https://github.com/xabdullahx/Login/releases/
